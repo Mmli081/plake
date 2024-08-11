@@ -18,7 +18,7 @@ This project aims to develop an automated system for detecting and blurring lice
 
 ## Data Collection
 
-- **Discription**: 80,000 Images were crawled and stored in drive
+- **Description**: 80,000 Images were crawled and stored in drive
 - **Preprocessing**: A zero-shot image classification model("openai/clip-vit-base-patch32") was employed to classify images into two categories: "has plate" and "does not have plate."
 
 ## Annotation
