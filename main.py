@@ -2,17 +2,24 @@ from ultralytics import YOLO
 import cv2
 from sort.sort import *
 from utils import get_car, write_csv, read_license_plate
+import os
+from dotenv import load_dotenv
 
+load_dotenv()
+BASE_MODEL = os.getenv("BASE_MODEL")
+PLATE_MODEL = os.getenv("PLATE_MODEL")
+VIDEO_INPUT = os.getenv("VIDEO_INPUT")
+CSV_OUTPUT = os.getenv("CSV_OUTPUT")
 
 results = {}
 
 mot_tracker = Sort()
 
 # load models
-coco_model = YOLO("yolov8n.pt")
-license_plate_detector = YOLO("./best.pt")
+coco_model = YOLO(BASE_MODEL)
+license_plate_detector = YOLO(PLATE_MODEL)
 
-cap = cv2.VideoCapture("CmKdPEUOMf2.mp4")
+cap = cv2.VideoCapture(VIDEO_INPUT)
 
 vehicles = [2, 3, 5, 7]
 
@@ -81,4 +88,4 @@ while ret:
                                 },
                             }
 
-write_csv(results, "./test.csv")
+write_csv(results, CSV_OUTPUT)

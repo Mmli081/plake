@@ -1,6 +1,4 @@
 #Data
-*data/
-data*/
 results
 runs
 test
@@ -131,7 +129,6 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
 .venv
 env/
 venv/

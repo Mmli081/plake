@@ -1,14 +1,16 @@
 import ast
-
 import cv2
 import numpy as np
 import pandas as pd
+import os
+from dotenv import load_dotenv
 
-results = pd.read_csv("./test.csv", encoding="utf-8")
+load_dotenv()
+VIDEO_INPUT = os.getenv("VIDEO_INPUT")
+VIDEO_OUTPUT = os.getenv("VIDEO_OUTPUT")
+CSV_OUTPUT = os.getenv("CSV_OUTPUT")
 
-# load video
-video_path = "CmKdPEUOMf2.mp4"
-
+results = pd.read_csv(CSV_OUTPUT, encoding="utf-8")
 
 def draw_border(
     img,
@@ -41,13 +43,13 @@ def draw_border(
     return img
 
 
-cap = cv2.VideoCapture(video_path)
+cap = cv2.VideoCapture(VIDEO_INPUT)
 
 fourcc = cv2.VideoWriter_fourcc(*"mp4v")  # Specify the codec
 fps = cap.get(cv2.CAP_PROP_FPS)
 width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
 height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
-out = cv2.VideoWriter("./out.mp4", fourcc, fps, (width, height))
+out = cv2.VideoWriter(VIDEO_OUTPUT, fourcc, fps, (width, height))
 
 license_plate = {}
 for car_id in np.unique(results["car_id"]):
