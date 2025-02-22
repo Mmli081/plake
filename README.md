@@ -47,8 +47,8 @@ To replicate the project, follow these steps:
 1. Clone this repository:
 
     ```bash
-    git clone https://github.com/Mmli081/plate.git
-    cd plate
+    git clone https://github.com/Mmli081/plake.git
+    cd plake
     ```
 
 2. Create a virtual environment and install the required packages:
