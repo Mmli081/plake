@@ -61,7 +61,7 @@ To replicate the project, follow these steps:
 
 ## Usage
 <div align="center">
-  <img src="build/mask_samples.jpg" alt="plate_examples" height="400">
+  <img src="build/mask_samples.jpg" alt="plate_examples" height="600">
 </div>
 
 ## Contributing
