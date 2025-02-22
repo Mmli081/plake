@@ -20,6 +20,7 @@ This project aims to develop an automated system for detecting and blurring lice
   - [Annotation](#annotation)
   - [Modeling](#modeling)
   - [Installation](#installation)
+  - [Usage](#usage)
   - [Contributing](#contributing)
   - [License](#license)
 
@@ -57,6 +58,11 @@ To replicate the project, follow these steps:
     source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
     pip install -r requirements.txt
     ```
+
+## Usage
+<div align="center">
+  <img src="build/mask_samples.jpg" alt="plate_examples" height="400">
+</div>
 
 ## Contributing
 
