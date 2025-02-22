@@ -3,8 +3,13 @@
 ## Overview
 
 This project aims to develop an automated system for detecting and blurring license plates in car images, specifically focusing on Iraqi vehicle plates. The project involves data collection, annotation, and model training using state-of-the-art techniques to achieve reliable plate detection.
+
 **Challenges:** One of the main challenges encountered in this project was the variety of license plate types in Iraq. Different styles, fonts, colors, and formats required careful consideration to ensure the model's robustness.
-<img src="build/plateSamples.jpg" alt="plate_examples" height="200">
+<div align="center">
+  <img src="build/plateSamples.jpg" alt="plate_examples" height="200">
+</div>
+
+**To see the final result of the model, checkout this [youtube video](https://www.youtube.com/watch?v=8cYx4Xxw2hE)**
 
 ## Table of Contents
 
